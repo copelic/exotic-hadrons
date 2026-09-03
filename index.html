@@ -8,6 +8,11 @@
     <title>Física de Hádrons: Os Hádrons Exóticos</title>
 
     <style>
+        /* Rolagem suave para os links do menu */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Georgia, "Times New Roman", serif;
@@ -40,6 +45,7 @@
             border-bottom: 1px solid #ddd;
             position: sticky;
             top: 0;
+            z-index: 100; /* Garante que o menu fique sobre os outros elementos */
         }
 
         nav a {
@@ -47,9 +53,11 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            transition: color 0.3s;
         }
 
         nav a:hover {
+            color: #4a705e;
             text-decoration: underline;
         }
 
@@ -61,6 +69,8 @@
 
         section {
             margin-bottom: 70px;
+            /* Dá um pequeno respiro para o menu fixo não cobrir o título ao rolar */
+            scroll-margin-top: 70px; 
         }
 
         h2 {
@@ -76,11 +86,26 @@
             margin: 20px 0;
             border-radius: 8px;
             border: 1px solid #ddd;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Efeito ao passar o mouse sobre os cards */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
         }
 
         .card h3 {
             margin-top: 0;
             color: #18251f;
+        }
+
+        .date-badge {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            display: block;
+            margin-bottom: 10px;
         }
 
         footer {
@@ -92,112 +117,109 @@
         }
 
         /* SOBRE MIM */
+        .sobre-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
 
-.sobre-container {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-}
+        .sobre-foto {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #18251f;
+            flex-shrink: 0;
+        }
 
-.sobre-foto {
-    width: 230px;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #18251f;
-    flex-shrink: 0;
-}
+        .sobre-texto {
+            flex: 1;
+        }
 
-.sobre-texto {
-    flex: 1;
-}
+        .sobre-texto h3 {
+            color: #18251f;
+            font-size: 26px;
+            margin-top: 0;
+        }
 
-.sobre-texto h3 {
-    color: #18251f;
-    font-size: 26px;
-    margin-top: 0;
-}
+        .links-academicos {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-.links-academicos {
-    margin-top: 25px;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+        .link-academico {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #18251f;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
 
-.link-academico {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #18251f;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
+        .link-academico:hover {
+            opacity: 0.8;
+        }
 
-.link-academico:hover {
-    opacity: 0.8;
-}
+        /* LINHA DO TEMPO */
+        .timeline {
+            margin-top: 40px;
+            border-left: 3px solid #18251f;
+            padding-left: 30px;
+        }
 
-/* LINHA DO TEMPO */
+        .timeline-item {
+            margin-bottom: 35px;
+            position: relative;
+        }
 
-.timeline {
-    margin-top: 40px;
-    border-left: 3px solid #18251f;
-    padding-left: 30px;
-}
+        .timeline-item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #18251f;
+            border-radius: 50%;
+            position: absolute;
+            left: -38px;
+            top: 8px;
+        }
 
-.timeline-item {
-    margin-bottom: 35px;
-    position: relative;
-}
+        .timeline-item h3 {
+            margin-bottom: 5px;
+            color: #18251f;
+        }
 
-.timeline-item::before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background: #18251f;
-    border-radius: 50%;
-    position: absolute;
-    left: -38px;
-    top: 8px;
-}
+        .timeline-item p {
+            margin-top: 0;
+        }
 
-.timeline-item h3 {
-    margin-bottom: 5px;
-    color: #18251f;
-}
+        /* CELULAR */
+        @media (max-width: 700px) {
+            .sobre-container {
+                flex-direction: column;
+                text-align: center;
+            }
 
-.timeline-item p {
-    margin-top: 0;
-}
+            .sobre-foto {
+                width: 180px;
+                height: 180px;
+            }
 
-/* CELULAR */
+            .links-academicos {
+                justify-content: center;
+            }
 
-@media (max-width: 700px) {
-
-    .sobre-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .sobre-foto {
-        width: 180px;
-        height: 180px;
-    }
-
-    .links-academicos {
-        justify-content: center;
-    }
-
-    .timeline {
-        text-align: left;
-    }
-}
+            .timeline {
+                text-align: left;
+            }
+        }
         
         @media (max-width: 600px) {
             header h1 {
@@ -220,32 +242,28 @@
     </header>
     
     <nav>
-    <a href="#inicio">Início</a>
-    <a href="#fundamentos">Fundamentos</a>
-    <a href="#pesquisa">Minha IC</a>
-    <a href="#artigos">Artigos</a>
-    <a href="#caderno">Caderno de Pesquisa</a>
-    <a href="#sobre">Sobre mim</a>
-    
+        <a href="#inicio">Início</a>
+        <a href="#fundamentos">Fundamentos</a>
+        <a href="#pesquisa">Minha IC</a>
+        <a href="#artigos">Artigos</a>
+        <a href="#caderno">Caderno de Pesquisa</a>
+        <a href="#sobre">Sobre mim</a>
     </nav>
 
     <main>
 
         <section id="inicio">
             <h2>Bem-vindo</h2>
-
             <p>
                 Este site reúne meus estudos, anotações e interpretações
                 desenvolvidos durante minha iniciação científica em Física
                 de Partículas, com ênfase em Hádrons Exóticos.
             </p>
-
             <p>
                 A proposta é organizar minha trajetória de aprendizagem,
                 partindo dos fundamentos necessários para compreender
                 conceitos mais avançados da Física de Partículas.
             </p>
-
             <p>
                 Mais do que um arquivo de materiais, este espaço funciona
                 como um caderno de pesquisa aberto, no qual registro aquilo
@@ -254,31 +272,30 @@
             </p>
         </section>
 
-
         <section id="fundamentos">
             <h2>Fundamentos</h2>
+
+            <div class="card">
+                <h3>Relatividade Restrita</h3>
+                <p>
+                    Espaço-tempo, transformações de Lorentz, quadrivetores
+                    e cinemática relativística. Base essencial para a compreensão de sistemas de altas energias.
+                </p>
+            </div>
 
             <div class="card">
                 <h3>Mecânica Lagrangeana</h3>
                 <p>
                     Conceitos de mecânica analítica necessários para a
-                    formulação de sistemas físicos.
+                    formulação de sistemas físicos, superando as limitações da formulação vetorial clássica.
                 </p>
             </div>
 
             <div class="card">
                 <h3>Teorema de Noether</h3>
                 <p>
-                    O estudo da relação entre simetrias contínuas e
-                    leis de conservação.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Relatividade Restrita</h3>
-                <p>
-                    Espaço-tempo, transformações de Lorentz, quadrivetores
-                    e cinemática relativística.
+                    O estudo da profunda relação entre simetrias contínuas da ação e as
+                    leis de conservação do sistema físico.
                 </p>
             </div>
 
@@ -291,35 +308,28 @@
             </div>
         </section>
 
-
         <section id="pesquisa">
             <h2>Minha Iniciação Científica</h2>
-
             <p>
                 <strong>Introdução à Física de Partículas com ênfase em
                 Hádrons Exóticos.</strong>
             </p>
-
             <p>
                 Esta seção será utilizada para apresentar o problema de
                 pesquisa, os objetivos da iniciação científica e os
-                conceitos necessários para compreender o tema.
+                conceitos necessários para compreender o tema. Os hádrons exóticos desafiam o modelo clássico de quarks e exigem um mergulho profundo na Cromodinâmica Quântica (QCD).
             </p>
         </section>
 
-
         <section id="artigos">
             <h2>Artigos</h2>
-
             <div class="card">
                 <h3>Enigmatic properties of Ξ(1620) and Ξ(1690)</h3>
-
                 <p>
                     Artigo estudado durante a iniciação científica,
                     relacionado às propriedades dos estados excitados
                     do bárion Ξ.
                 </p>
-
                 <p>
                     <strong>Minha interpretação:</strong>
                     Esta seção será preenchida com minhas anotações,
@@ -329,30 +339,68 @@
             </div>
         </section>
 
-
         <section id="caderno">
             <h2>Caderno de Pesquisa</h2>
 
             <div class="card">
-                <h3>03/09/2026 — Teorema de Noether</h3>
-
+                <h3>Estudo do Teorema de Noether</h3>
+                <span class="date-badge">Atualmente</span>
                 <p>
                     Início do estudo do Teorema de Noether e de sua
                     aplicação em exercícios. Também foi discutida a
                     importância de definir corretamente o sistema físico
-                    antes de analisar suas propriedades.
+                    (a Lagrangeana) antes de analisar suas propriedades de simetria.
                 </p>
-
                 <p>
-                    <strong>Próximo passo:</strong>
-                    continuar o estudo do teorema e sua aplicação
-                    em diferentes sistemas.
+                    <strong>Próximo passo:</strong> Continuar o estudo do teorema e sua aplicação
+                    em campos (transição da mecânica clássica para teoria clássica de campos).
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cinemática Relativística e Mecânica Lagrangeana</h3>
+                <span class="date-badge">Semanas Anteriores</span>
+                <p>
+                    Aprofundamento em Relatividade Restrita (utilizando referenciais como o Schutz) e o formalismo de Euler-Lagrange, preparando o terreno matemático e conceitual para tratar de partículas elementares.
                 </p>
             </div>
         </section>
 
-    </main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            
+            <div class="sobre-container">
+                <img src="https://via.placeholder.com/230x230.png?text=Sua+Foto" alt="Minha Foto" class="sobre-foto">
+                
+                <div class="sobre-texto">
+                    <h3>Olá, eu sou a Carolina Copeli.</h3>
+                    <p>
+                        Sou aluna da graduação em Física, apaixonada por desvendar as regras fundamentais que regem o universo. Atualmente, dedico minha pesquisa de Iniciação Científica ao estudo teórico de Partículas, com foco em Hádrons Exóticos.
+                    </p>
+                    <div class="links-academicos">
+                        <a href="https://lattes.cnpq.br/1986064110068969" class="link-academico">Currículo Lattes</a>
+                        <a href="www.linkedin.com/in/carolina-copeli" class="link-academico">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Início da Iniciação Científica</h3>
+                    <p>Foco na Introdução à Física de Partículas, transição da mecânica lagrangeana para o estudo de simetrias (Teorema de Noether).</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Aprofundamento Teórico</h3>
+                    <p>Estudos avançados em Relatividade Restrita (baseados em textos clássicos como o Schutz) e mecânica analítica.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Ciclo Básico de Física</h3>
+                    <p>Formação inicial passando pela mecânica clássica, eletromagnetismo e termodinâmica (utilizando obras de referência como o Moysés Nussenzveig), construindo a base para a física moderna.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <p>Física de Partículas · Hádrons Exóticos</p>
