@@ -288,3 +288,94 @@ footer {
         padding: 0 18px;
     }
 }
+/* =========================
+   PÁGINA DE ARTIGOS
+   ========================= */
+
+.article-meta {
+    font-size: 14px;
+    color: #555;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 3px solid #4a705e;
+}
+
+.article-meta p {
+    margin: 5px 0;
+}
+
+.article-meta a {
+    color: #4a705e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.article-meta a:hover {
+    text-decoration: underline;
+}
+
+.article-notes {
+    background: #eef2f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.article-notes h4 {
+    margin-top: 0;
+    color: #18251f;
+    font-size: 18px;
+    border-bottom: 1px solid #d1dfd7;
+    padding-bottom: 10px;
+}
+
+.article-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.button-outline {
+    background: transparent;
+    color: #18251f;
+    border: 2px solid #18251f;
+}
+
+.button-outline:hover {
+    background: #18251f;
+    color: white;
+    opacity: 1; /* Sobrescreve o hover do botão normal */
+}
+
+/* Container interativo do PDF */
+.pdf-viewer-container {
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.pdf-viewer-container summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #4a705e;
+    list-style: none; /* Remove a setinha padrão em alguns navegadores */
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.pdf-viewer-container summary:hover {
+    background: #eef2f0;
+}
+
+.pdf-viewer-container iframe {
+    border-radius: 6px;
+    margin-top: 15px;
+    background: #eaeaea; /* Fundo enquanto o PDF carrega */
+}
