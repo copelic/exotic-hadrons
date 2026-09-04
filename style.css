@@ -1,1 +1,290 @@
-style
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f7f4;
+    color: #222;
+    line-height: 1.7;
+}
+/* =========================
+   CABEÇALHO
+   ========================= */
+header {
+    background: #18251f;
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+/* =========================
+   MENU
+   ========================= */
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav a {
+    color: #18251f;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #4a705e;
+    text-decoration: underline;
+}
+/* Página atual */
+nav a.active {
+    color: #4a705e;
+}
+/* =========================
+   CONTEÚDO
+   ========================= */
+main {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+section {
+    margin-bottom: 70px;
+    scroll-margin-top: 70px;
+}
+h2 {
+    color: #18251f;
+    font-size: 30px;
+    border-bottom: 2px solid #18251f;
+    padding-bottom: 8px;
+}
+h3 {
+    color: #18251f;
+}
+/* =========================
+   TEXTO INICIAL
+   ========================= */
+.intro-texto {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+.highlight {
+    font-weight: bold;
+    color: #4a705e;
+}
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #18251f;
+    margin: 40px 0;
+    padding: 20px 25px;
+    background: #eef2f0;
+    color: #18251f;
+    font-size: 22px;
+    border-radius: 0 8px 8px 0;
+}
+/* =========================
+   CARDS
+   ========================= */
+.card {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+}
+.card h3 {
+    margin-top: 0;
+}
+.date-badge {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+/* =========================
+   CARDS CLICÁVEIS
+   ========================= */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.card-link .card {
+    cursor: pointer;
+}
+.card-link .card:hover {
+    border-color: #4a705e;
+}
+/* =========================
+   BOTÕES
+   ========================= */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #18251f;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+.button:hover {
+    opacity: 0.8;
+}
+/* =========================
+   SOBRE MIM
+   ========================= */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+.sobre-foto {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #18251f;
+    flex-shrink: 0;
+}
+.sobre-texto {
+    flex: 1;
+}
+.sobre-texto h3 {
+    font-size: 26px;
+    margin-top: 0;
+}
+.links-academicos {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.link-academico {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #18251f;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+.link-academico:hover {
+    opacity: 0.8;
+}
+/* =========================
+   LINHA DO TEMPO
+   ========================= */
+.timeline {
+    margin-top: 40px;
+    border-left: 3px solid #18251f;
+    padding-left: 30px;
+}
+.timeline-item {
+    margin-bottom: 35px;
+    position: relative;
+}
+.timeline-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #18251f;
+    border-radius: 50%;
+    position: absolute;
+    left: -38px;
+    top: 8px;
+}
+.timeline-item h3 {
+    margin-bottom: 5px;
+}
+.timeline-item p {
+    margin-top: 0;
+}
+/* =========================
+   STATUS DE ESTUDO
+   ========================= */
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.status-concluido {
+    background: #dfeee6;
+    color: #28553e;
+}
+.status-andamento {
+    background: #f1ead2;
+    color: #665521;
+}
+.status-futuro {
+    background: #e8e8e8;
+    color: #555;
+}
+/* =========================
+   RODAPÉ
+   ========================= */
+footer {
+    background: #18251f;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+}
+/* =========================
+   CELULAR
+   ========================= */
+@media (max-width: 700px) {
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sobre-foto {
+        width: 180px;
+        height: 180px;
+    }
+    .links-academicos {
+        justify-content: center;
+    }
+    .timeline {
+        text-align: left;
+    }
+}
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+    main {
+        padding: 0 18px;
+    }
+}
