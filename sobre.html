@@ -33,50 +33,61 @@
          CONTEÚDO
          ========================= -->
     <main>
-        <section class="card" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center;">
-            <div style="flex: 1; min-width: 200px; text-align: center;">
-                <!-- Substitua 'perfil.png' pelo nome exato da sua foto no repositório -->
-                <img src="perfil.jpg" alt="Foto de Carolina Copeli" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid var(--cor-primaria, #004b87);">
-            </div>
-            <div style="flex: 2; min-width: 280px;">
-                <h2>Carolina Copeli</h2>
-                <p><strong>Curso:</strong> Física - Bacharelado (Instituto de Física da USP)</p>
-                <p><strong>Ingresso:</strong> 07/03/2025</p>
-                <p><strong>Contato:</strong> <a href="mailto:copeli@usp.br">copeli@usp.br</a></p>
-                <div style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a href="https://www.linkedin.com/in/carolina-copeli" target="_blank" class="button button-outline">LinkedIn</a>
-                    <a href="https://lattes.cnpq.br/1986064110068969" target="_blank" class="button button-outline">Lattes</a>
-                    <a href="https://orcid.org/0009-0009-6414-5739" target="_blank" class="button button-outline">ORCID</a>
+        <!-- APRESENTAÇÃO / PERFIL -->
+        <section>
+            <div class="sobre-container">
+                <!-- Substitua 'perfil.jpg' pelo nome exato da sua foto no repositório -->
+                <img src="perfil.jpg" alt="Foto de Carolina Copeli" class="sobre-foto">
+                <div class="sobre-texto">
+                    <h3>Carolina Copeli</h3>
+                    <p><strong>Curso:</strong> Física - Bacharelado (Instituto de Física da USP)</p>
+                    <p><strong>Ingresso:</strong> 07/03/2025</p>
+                    <p><strong>Contato:</strong> <a href="mailto:copeli@usp.br" style="color: #4a705e; font-weight: bold;">copeli@usp.br</a></p>
+                    
+                    <div class="links-academicos">
+                        <a href="https://www.linkedin.com/in/carolina-copeli" target="_blank" class="link-academico">LinkedIn</a>
+                        <a href="https://lattes.cnpq.br/1986064110068969" target="_blank" class="link-academico">Lattes</a>
+                        <a href="https://orcid.org/0009-0009-6414-5739" target="_blank" class="link-academico">ORCID</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="card">
+        <!-- MINHA HISTÓRIA -->
+        <section>
             <h2>Minha História</h2>
-            <p>
-                Minha jornada na física teve início em março de 2025, quando ingressei no bacharelado em Física no Instituto de Física da Universidade de São Paulo (IFUSP). Desde os primeiros semestres, busquei unir a base rigorosa em matemática e mecânica com uma forte inclinação para a computação e a pesquisa de altas energias.
-            </p>
-            <p>
-                Em dezembro de 2025, dei um passo importante ao iniciar minha Iniciação Científica (IC), voltando meus estudos para a fascinante área dos hádrons exóticos e da física de partículas. Ao longo desse percurso, também estive envolvida com atividades de extensão — como o projeto <em>Astrominas</em> e visitas técnicas ao acelerador de partículas do Laboratório Pelletron —, além de atuar na monitoria de disciplinas fundamentais como Física do Calor.
-            </p>
+            <div class="card intro-texto">
+                <p>
+                    Minha jornada na física teve início em março de 2025, quando ingressei no bacharelado em Física no Instituto de Física da Universidade de São Paulo (IFUSP). Desde os primeiros semestres, busquei unir a base rigorosa em matemática e mecânica com uma forte inclinação para a computação e a pesquisa de altas energias.
+                </p>
+                <p>
+                    Em dezembro de 2025, dei um passo importante ao iniciar minha Iniciação Científica (IC), voltando meus estudos para a fascinante área dos hádrons exóticos e da física de partículas. Ao longo desse percurso, também estive envolvida com atividades de extensão — como o projeto <em>Astrominas</em> e visitas técnicas ao acelerador de partículas do Laboratório Pelletron —, além de atuar na monitoria de disciplinas fundamentais como Física do Calor.
+                </p>
+            </div>
         </section>
 
+        <!-- LINHA DO TEMPO -->
         <section>
             <h2>Linha do Tempo Acadêmica</h2>
-            <div class="repo-list">
-                <div class="repo-item">
-                    <span><strong>Março / 2025:</strong> Início da graduação em Física - Bacharelado no Instituto de Física da USP.</span>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="status status-concluido">Março / 2025</span>
+                    <h3>Início da Graduação</h3>
+                    <p>Ingresso no bacharelado em Física - Bacharelado no Instituto de Física da USP.</p>
                 </div>
-                <div class="repo-item">
-                    <span><strong>Dezembro / 2025:</strong> Início da Iniciação Científica (IC).</span>
+                <div class="timeline-item">
+                    <span class="status status-concluido">Dezembro / 2025</span>
+                    <h3>Início da Iniciação Científica (IC)</h3>
+                    <p>Início das pesquisas voltadas a hádrons exóticos e física de partículas.</p>
                 </div>
             </div>
         </section>
 
+        <!-- ATIVIDADES E EXTENSÃO -->
         <section>
             <h2>Atividades Acadêmicas e Extensão</h2>
             <div class="card">
-                <ul>
+                <ul style="margin: 0; padding-left: 20px;">
                     <li><strong>Monitoria:</strong> Atuei como monitora da disciplina de Física do Calor (1º Semestre de 2026).</li>
                     <li><strong>Extensão:</strong> Participação no projeto <em>Astrominas - Apropriação do Universo Científico por Alunas da Educação Básica</em> e tour ao Acelerador de Partículas do Laboratório Pelletron.</li>
                     <li><strong>Desenvolvimento:</strong> Conclusão do módulo 1 do <em>Aspire Leaders Program</em> e participação na Semana da Física da USP.</li>
@@ -84,40 +95,42 @@
             </div>
         </section>
 
-        <!-- NOVO: Formulário de Contato -->
-        <section class="card">
+        <!-- FORMULÁRIO DE CONTATO -->
+        <section>
             <h2>Contato / Aulas Particulares</h2>
-            <p>Interessado em aulas particulares de Física e Matemática ou colaborações acadêmicas? Envie uma mensagem:</p>
-            
-            <!-- Substitua SEU_ID_DO_FORMSPREE pelo link gerado na sua conta gratuita do Formspree -->
-            <form action="https://formspree.io/f/SEU_ID_DO_FORMSPREE" method="POST" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+            <div class="card">
+                <p>Interessado em aulas particulares de Física e Matemática ou colaborações acadêmicas? Envie uma mensagem:</p>
                 
-                <div>
-                    <label for="nome" style="display: block; margin-bottom: 5px;"><strong>Seu Nome:</strong></label>
-                    <input type="text" id="nome" name="name" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
-                </div>
+                <!-- Substitua SEU_ID_DO_FORMSPREE pelo link gerado na sua conta do Formspree -->
+                <form action="https://formspree.io/f/SEU_ID_DO_FORMSPREE" method="POST" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    
+                    <div>
+                        <label for="nome" style="display: block; margin-bottom: 5px; font-weight: bold; color: #18251f;">Seu Nome:</label>
+                        <input type="text" id="nome" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit;">
+                    </div>
 
-                <div>
-                    <label for="email" style="display: block; margin-bottom: 5px;"><strong>Seu E-mail:</strong></label>
-                    <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
-                </div>
+                    <div>
+                        <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold; color: #18251f;">Seu E-mail:</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit;">
+                    </div>
 
-                <div>
-                    <label for="assunto" style="display: block; margin-bottom: 5px;"><strong>Assunto:</strong></label>
-                    <select id="assunto" name="assunto" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
-                        <option value="aulas">Aulas Particulares (Física/Matemática)</option>
-                        <option value="pesquisa">Pesquisa / Iniciação Científica</option>
-                        <option value="outro">Outros Assuntos Acadêmicos</option>
-                    </select>
-                </div>
+                    <div>
+                        <label for="assunto" style="display: block; margin-bottom: 5px; font-weight: bold; color: #18251f;">Assunto:</label>
+                        <select id="assunto" name="assunto" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; background: white;">
+                            <option value="aulas">Aulas Particulares (Física/Matemática)</option>
+                            <option value="pesquisa">Pesquisa / Iniciação Científica</option>
+                            <option value="outro">Outros Assuntos Acadêmicos</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <label for="mensagem" style="display: block; margin-bottom: 5px;"><strong>Mensagem:</strong></label>
-                    <textarea id="mensagem" name="message" rows="5" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
-                </div>
+                    <div>
+                        <label for="mensagem" style="display: block; margin-bottom: 5px; font-weight: bold; color: #18251f;">Mensagem:</label>
+                        <textarea id="mensagem" name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit;"></textarea>
+                    </div>
 
-                <button type="submit" class="button" style="align-self: flex-start; cursor: pointer; border: none;">Enviar Mensagem</button>
-            </form>
+                    <button type="submit" class="button" style="align-self: flex-start; cursor: pointer; border: none;">Enviar Mensagem</button>
+                </form>
+            </div>
         </section>
     </main>
 
