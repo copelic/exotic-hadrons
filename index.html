@@ -1,461 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Física de Hádrons: Os Hádrons Exóticos</title>
-
-    <style>
-        /* Rolagem suave para os links do menu */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Georgia, "Times New Roman", serif;
-            background: #f7f7f4;
-            color: #222;
-            line-height: 1.7;
-        }
-
-        header {
-            background: #18251f;
-            color: white;
-            padding: 70px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 20px;
-            opacity: 0.9;
-        }
-
-        nav {
-            background: white;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav a {
-            color: #18251f;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #4a705e;
-            text-decoration: underline;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 25px;
-        }
-
-        section {
-            margin-bottom: 70px;
-            scroll-margin-top: 70px; 
-        }
-
-        h2 {
-            color: #18251f;
-            font-size: 30px;
-            border-bottom: 2px solid #18251f;
-            padding-bottom: 8px;
-        }
-
-        /* ESTILOS ESPECÍFICOS PARA O INÍCIO */
-        .intro-texto {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #4a705e; /* Tom de verde que combina com o menu no hover */
-        }
-
-        blockquote {
-            font-style: italic;
-            border-left: 5px solid #18251f;
-            margin: 40px 0;
-            padding: 20px 25px;
-            background: #eef2f0;
-            color: #18251f;
-            font-size: 22px;
-            border-radius: 0 8px 8px 0;
-        }
-
-        /* CARDS */
-        .card {
-            background: white;
-            padding: 25px;
-            margin: 20px 0;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.05);
-        }
-
-        .card h3 {
-            margin-top: 0;
-            color: #18251f;
-        }
-
-        .date-badge {
-            font-size: 14px;
-            color: #666;
-            font-style: italic;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            background: #18251f;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 80px;
-        }
-
-        /* SOBRE MIM */
-        .sobre-container {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #ddd;
-        }
-
-        .sobre-foto {
-            width: 230px;
-            height: 230px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #18251f;
-            flex-shrink: 0;
-        }
-
-        .sobre-texto {
-            flex: 1;
-        }
-
-        .sobre-texto h3 {
-            color: #18251f;
-            font-size: 26px;
-            margin-top: 0;
-        }
-
-        .links-academicos {
-            margin-top: 25px;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .link-academico {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #18251f;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: opacity 0.3s;
-        }
-
-        .link-academico:hover {
-            opacity: 0.8;
-        }
-
-        /* LINHA DO TEMPO */
-        .timeline {
-            margin-top: 40px;
-            border-left: 3px solid #18251f;
-            padding-left: 30px;
-        }
-
-        .timeline-item {
-            margin-bottom: 35px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: "";
-            width: 12px;
-            height: 12px;
-            background: #18251f;
-            border-radius: 50%;
-            position: absolute;
-            left: -38px;
-            top: 8px;
-        }
-
-        .timeline-item h3 {
-            margin-bottom: 5px;
-            color: #18251f;
-        }
-
-        .timeline-item p {
-            margin-top: 0;
-        }
-
-        /* CELULAR */
-        @media (max-width: 700px) {
-            .sobre-container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .sobre-foto {
-                width: 180px;
-                height: 180px;
-            }
-
-            .links-academicos {
-                justify-content: center;
-            }
-
-            .timeline {
-                text-align: left;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 30px;
-            }
-
-            nav a {
-                display: block;
-                margin: 8px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <header>
         <h1>Física de Partículas com Ênfase em Hádrons Exóticos</h1>
-        <p>Uma jornada de estudo pelo Mundo das Partículas</p>
+        <p>Uma jornada de estudo pelo mundo das partículas</p>
     </header>
-    
     <nav>
-        <a href="#inicio">Início</a>
-        <a href="#fundamentos">Fundamentos</a>
-        <a href="#pesquisa">Minha IC</a>
-        <a href="#artigos">Artigos</a>
-        <a href="#caderno">Caderno de Pesquisa</a>
-        <a href="#sobre">Sobre mim</a>
+        <a href="index.html" class="active">Início</a>
+        <a href="fundamentos.html">Fundamentos</a>
+        <a href="ic.html">Minha IC</a>
+        <a href="artigos.html">Artigos</a>
+        <a href="exercicios.html">Exercícios</a>
+        <a href="bibliografia.html">Bibliografia</a>
+        <a href="aulas.html">Aulas</a>
+        <a href="sobre.html">Sobre mim</a>
     </nav>
-
     <main>
-
-        <section id="inicio">
+        <section>
             <h2>Bem-vindo</h2>
-            
             <div class="intro-texto">
                 <p>
-                    Entrar na <span class="highlight">Física de Partículas</span> pode ser, ao mesmo tempo, fascinante e intimidante. 
-                    Existe uma quantidade enorme de conceitos, formalismos matemáticos, partículas, simetrias, 
-                    modelos e artigos científicos para conhecer. Muitas vezes, porém, a maior dificuldade não 
-                    é encontrar informação — é descobrir por onde começar.
+                    Entrar na <span class="highlight">Física de Partículas</span>
+                    pode ser, ao mesmo tempo, fascinante e intimidante.
+                    Existe uma quantidade enorme de conceitos, formalismos
+                    matemáticos, partículas, simetrias, modelos e artigos
+                    científicos para conhecer. Muitas vezes, porém, a maior
+                    dificuldade não é encontrar informação — é descobrir
+                    por onde começar.
                 </p>
-
                 <p>
-                    Este site nasceu justamente dessa inquietação. Durante minha formação e minha iniciação científica, 
-                    percebi que compreender um tema de pesquisa exige muito mais do que simplesmente ler artigos. 
-                    Antes de chegar aos resultados mais avançados, existe todo um caminho de construção: 
-                    mecânica analítica, formulação lagrangeana, relatividade, simetrias e tensores que vão formando 
-                    a linguagem necessária para este universo.
+                    Este site nasceu justamente dessa inquietação. Durante
+                    minha formação e minha iniciação científica, percebi que
+                    compreender um tema de pesquisa exige muito mais do que
+                    simplesmente ler artigos. Antes de chegar aos resultados
+                    mais avançados, existe todo um caminho de construção:
+                    mecânica analítica, formulação lagrangeana, relatividade,
+                    mecânica quântica, simetrias, grupos e tensores que vão
+                    formando a linguagem necessária para este universo.
                 </p>
-
                 <p>
-                    Um estudante que começa uma IC pode se deparar com dezenas de conceitos que ainda não conhece. 
-                    É fácil ter a sensação de estar sempre atrasado ou de que já deveria entender algo que ainda não teve a oportunidade de estudar. 
+                    Um estudante que começa uma iniciação científica pode se
+                    deparar com dezenas de conceitos que ainda não conhece.
+                    É fácil ter a sensação de estar sempre atrasado ou de que
+                    já deveria entender algo que ainda não teve a oportunidade
+                    de estudar.
                     <strong>Eu também estou construindo esse caminho.</strong>
                 </p>
-
                 <blockquote>
-                    "Não quero apenas registrar respostas. Quero registrar também o caminho até elas."
+                    "Não quero apenas registrar respostas.
+                    Quero registrar também o caminho até elas."
                 </blockquote>
-
                 <p>
-                    Por isso, este espaço não é uma enciclopédia pronta. Ele é, principalmente, um <span class="highlight">registro do meu processo de aprendizagem</span>. 
-                    Aqui reúno os conceitos que estudo, minhas interpretações, dúvidas, dificuldades e as conexões que vou construindo.
+                    Por isso, este espaço não é uma enciclopédia pronta.
+                    Ele é, principalmente, um
+                    <span class="highlight">
+                        registro do meu processo de aprendizagem
+                    </span>.
+                    Aqui reúno os conceitos que estudo, minhas interpretações,
+                    dúvidas, dificuldades e as conexões que vou construindo.
                 </p>
-
                 <p>
-                    Meu objetivo é criar uma espécie de <strong>mapa</strong>. Quais conhecimentos são necessários antes de estudar determinado assunto? 
-                    Por que determinado conceito aparece? O que um artigo realmente está dizendo quando utiliza uma linguagem que, à primeira vista, parece inacessível?
+                    Meu objetivo é criar uma espécie de
+                    <strong>mapa de aprendizagem</strong>.
+                    Quais conhecimentos são necessários antes de estudar
+                    determinado assunto? Por que determinado conceito aparece?
+                    O que um artigo realmente está dizendo quando utiliza uma
+                    linguagem que, à primeira vista, parece inacessível?
                 </p>
-
                 <p>
-                    O ponto de partida da minha própria pesquisa são os <span class="highlight">Hádrons Exóticos</span>, mas o caminho até eles passa por uma parte muito maior da Física. 
-                    Por isso, este projeto começa nos fundamentos e pretende avançar gradualmente. Talvez, no futuro, este site se transforme num material que 
-                    outro estudante possa encontrar justamente no momento em que precisar de alguém que diga: <em>"Comece por aqui."</em>
+                    O ponto de partida da minha própria pesquisa são os
+                    <span class="highlight">Hádrons Exóticos</span>,
+                    mas o caminho até eles passa por uma parte muito maior
+                    da Física. Por isso, este projeto começa nos fundamentos
+                    e pretende avançar gradualmente.
                 </p>
-            </div>
-        </section>
-
-        <section id="fundamentos">
-            <h2>Fundamentos</h2>
-
-            <div class="card">
-                <h3>Relatividade Restrita</h3>
                 <p>
-                    Espaço-tempo, transformações de Lorentz, quadrivetores
-                    e cinemática relativística. Base essencial para a compreensão de sistemas de altas energias.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Mecânica Lagrangeana</h3>
-                <p>
-                    Conceitos de mecânica analítica necessários para a
-                    formulação de sistemas físicos, superando as limitações da formulação vetorial clássica.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Teorema de Noether</h3>
-                <p>
-                    O estudo da profunda relação entre simetrias contínuas da ação e as
-                    leis de conservação do sistema físico.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Simetrias, Grupos e Tensores</h3>
-                <p>
-                    Ferramentas matemáticas fundamentais para a descrição
-                    das simetrias em Física de Partículas.
+                    Talvez, no futuro, este site se transforme em um material
+                    que outro estudante possa encontrar justamente no momento
+                    em que precisar de alguém que diga:
+                    <em>"Comece por aqui."</em>
                 </p>
             </div>
         </section>
-
-        <section id="pesquisa">
-            <h2>Minha Iniciação Científica</h2>
-            <p>
-                <strong>Introdução à Física de Partículas com ênfase em
-                Hádrons Exóticos.</strong>
-            </p>
-            <p>
-                Esta seção será utilizada para apresentar o problema de
-                pesquisa, os objetivos da iniciação científica e os
-                conceitos necessários para compreender o tema. Os hádrons exóticos desafiam o modelo clássico de quarks e exigem um mergulho profundo na Cromodinâmica Quântica (QCD).
-            </p>
-        </section>
-
-        <section id="artigos">
-            <h2>Artigos</h2>
-            <div class="card">
-                <h3>Enigmatic properties of Ξ(1620) and Ξ(1690)</h3>
-                <p>
-                    Artigo estudado durante a iniciação científica,
-                    relacionado às propriedades dos estados excitados
-                    do bárion Ξ.
-                </p>
-                <p>
-                    <strong>Minha interpretação:</strong>
-                    Esta seção será preenchida com minhas anotações,
-                    explicações, dúvidas e conexões com os conceitos
-                    estudados.
-                </p>
-            </div>
-        </section>
-
-        <section id="caderno">
-            <h2>Caderno de Pesquisa</h2>
-
-            <div class="card">
-                <h3>Estudo do Teorema de Noether</h3>
-                <span class="date-badge">Atualmente</span>
-                <p>
-                    Início do estudo do Teorema de Noether e de sua
-                    aplicação em exercícios. Também foi discutida a
-                    importância de definir corretamente o sistema físico
-                    (a Lagrangeana) antes de analisar suas propriedades de simetria.
-                </p>
-                <p>
-                    <strong>Próximo passo:</strong> Continuar o estudo do teorema e sua aplicação
-                    em campos (transição da mecânica clássica para teoria clássica de campos).
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Cinemática Relativística e Mecânica Lagrangeana</h3>
-                <span class="date-badge">Semanas Anteriores</span>
-                <p>
-                    Aprofundamento em Relatividade Restrita (utilizando referenciais como o Schutz) e o formalismo de Euler-Lagrange, preparando o terreno matemático e conceitual para tratar de partículas elementares.
-                </p>
-            </div>
-        </section>
-
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            
-            <div class="sobre-container">
-                <img src="perfil.png" alt="Minha Foto" class="sobre-foto">
-                
-                <div class="sobre-texto">
-                    <h3>Olá, eu sou a Carolina Copeli.</h3>
+        <section>
+            <h2>Explore o site</h2>
+            <a href="fundamentos.html" class="card-link">
+                <div class="card">
+                    <h3>📚 Fundamentos</h3>
                     <p>
-                        Sou aluna da graduação em Física, apaixonada por desvendar as regras fundamentais que regem o universo. Atualmente, dedico minha pesquisa de Iniciação Científica ao estudo teórico de Partículas, com foco em Hádrons Exóticos.
+                        O caminho de conhecimentos necessários para chegar
+                        à Física de Partículas, organizado de forma
+                        progressiva.
                     </p>
-                    <div class="links-academicos">
-                        <a href="https://lattes.cnpq.br/1986064110068969" class="link-academico" target="_blank">Currículo Lattes</a>
-                        <a href="https://www.linkedin.com/in/carolina-copeli" class="link-academico" target="_blank">LinkedIn</a>
-                    </div>
                 </div>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Início da Iniciação Científica</h3>
-                    <p>Foco na Introdução à Física de Partículas, transição da mecânica lagrangeana para o estudo de simetrias (Teorema de Noether).</p>
+            </a>
+            <a href="ic.html" class="card-link">
+                <div class="card">
+                    <h3>🔬 Minha Iniciação Científica</h3>
+                    <p>
+                        Meu projeto, objetivos, trajetória de pesquisa,
+                        diário de estudos e evolução ao longo da IC.
+                    </p>
                 </div>
-                <div class="timeline-item">
-                    <h3>Aprofundamento Teórico</h3>
-                    <p>Estudos avançados em Relatividade Restrita (baseados em textos clássicos como o Schutz) e mecânica analítica.</p>
+            </a>
+            <a href="artigos.html" class="card-link">
+                <div class="card">
+                    <h3>📄 Artigos</h3>
+                    <p>
+                        Artigos que estou lendo ou já li, acompanhados
+                        das minhas interpretações, dúvidas e anotações.
+                    </p>
                 </div>
-                <div class="timeline-item">
-                    <h3>Ciclo Básico de Física</h3>
-                    <p>Formação inicial passando pela mecânica clássica, eletromagnetismo e termodinâmica (utilizando obras de referência como o Moysés Nussenzveig), construindo a base para a física moderna.</p>
+            </a>
+            <a href="exercicios.html" class="card-link">
+                <div class="card">
+                    <h3>📝 Exercícios</h3>
+                    <p>
+                        Um repositório das listas e exercícios que fazem
+                        parte da minha formação.
+                    </p>
                 </div>
-            </div>
+            </a>
+            <a href="bibliografia.html" class="card-link">
+                <div class="card">
+                    <h3>📖 Bibliografia</h3>
+                    <p>
+                        Livros, notas de aula, apostilas e outras referências
+                        utilizadas durante meus estudos.
+                    </p>
+                </div>
+            </a>
+            <a href="aulas.html" class="card-link">
+                <div class="card">
+                    <h3>🎥 Aulas</h3>
+                    <p>
+                        Aulas gravadas e materiais relacionados aos conteúdos
+                        estudados.
+                    </p>
+                </div>
+            </a>
         </section>
-
     </main>
-
     <footer>
         <p>Física de Partículas · Hádrons Exóticos</p>
         <p>Projeto de estudo e iniciação científica</p>
     </footer>
-
 </body>
-
 </html>
