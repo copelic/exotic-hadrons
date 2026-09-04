@@ -45,7 +45,7 @@
             border-bottom: 1px solid #ddd;
             position: sticky;
             top: 0;
-            z-index: 100; /* Garante que o menu fique sobre os outros elementos */
+            z-index: 100;
         }
 
         nav a {
@@ -69,7 +69,6 @@
 
         section {
             margin-bottom: 70px;
-            /* Dá um pequeno respiro para o menu fixo não cobrir o título ao rolar */
             scroll-margin-top: 70px; 
         }
 
@@ -80,6 +79,30 @@
             padding-bottom: 8px;
         }
 
+        /* ESTILOS ESPECÍFICOS PARA O INÍCIO */
+        .intro-texto {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #4a705e; /* Tom de verde que combina com o menu no hover */
+        }
+
+        blockquote {
+            font-style: italic;
+            border-left: 5px solid #18251f;
+            margin: 40px 0;
+            padding: 20px 25px;
+            background: #eef2f0;
+            color: #18251f;
+            font-size: 22px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* CARDS */
         .card {
             background: white;
             padding: 25px;
@@ -89,7 +112,6 @@
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        /* Efeito ao passar o mouse sobre os cards */
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0,0,0,0.05);
@@ -254,74 +276,49 @@
 
         <section id="inicio">
             <h2>Bem-vindo</h2>
-            <p>
-                Entrar na Física de Partículas pode ser, ao mesmo tempo, fascinante e intimidante.
-                Existe uma quantidade enorme de conceitos, formalismos matemáticos, partículas, simetrias,
-                modelos e artigos científicos para conhecer. Muitas vezes, porém, a maior dificuldade não
-                é encontrar informação — é descobrir por onde começar.
-            </p>
-            <p>
-                Este site nasceu justamente dessa inquietação.
-                Durante minha formação e minha iniciação científica em Física de Partículas,
-                percebi que compreender um tema de pesquisa exige muito mais do que simplesmente ler os artigos relacionados a ele.
-                Antes de chegar aos resultados mais avançados, existe todo um caminho de construção:
-                mecânica analítica, formulação lagrangeana, relatividade, simetrias, grupos, tensores,
-                teoria quântica e muitos outros conceitos que vão formando, pouco a pouco, a linguagem 
-                necessária para compreender a Física de Partículas.
-            </p>
-            <p>
-
-                E esse caminho nem sempre é evidente.
-
-                Um estudante que começa uma iniciação científica pode receber um artigo,
-                uma lista de referências ou um tema de pesquisa e se deparar com dezenas de conceitos que ainda não conhece.
-                É fácil ter a sensação de estar sempre atrasado ou de que deveria entender algo que, na verdade, ainda não teve a oportunidade de estudar.
-            </p>
-            <p>
-
-                Eu também estou construindo esse caminho.
-
-                Por isso, este espaço não foi criado como uma enciclopédia pronta ou como um lugar onde apresento apenas aquilo que já sei.
-                Ele é, principalmente, um registro do processo de aprendizagem. Aqui reúno os conceitos que estudo, os artigos que leio,
-                minhas interpretações, dúvidas, dificuldades e as conexões que vou construindo ao longo da minha iniciação científica.
-            </p>
-            <p>
-
-                A ideia é que este site possa crescer junto comigo — e, ao mesmo tempo, 
-                possa ser útil para outras pessoas que estejam começando uma trajetória semelhante.
-
-                Meu objetivo é criar uma espécie de mapa para quem está começando na Física de Partículas,
-                especialmente para estudantes de iniciação científica que receberam um tema de pesquisa,
-                olharam para o primeiro artigo e pensaram: “Eu não faço ideia de por onde começar.”
-            </p>
-            <p>
-                Não quero apenas registrar respostas. Quero registrar também o caminho até elas.
             
-                Quais conhecimentos são necessários antes de estudar determinado assunto?
-                Por que determinado conceito aparece? Como uma ideia aprendida em uma disciplina
-                se conecta com um problema de pesquisa? O que um artigo realmente está dizendo quando 
-                utiliza uma linguagem que, à primeira vista, parece inacessível?
+            <div class="intro-texto">
+                <p>
+                    Entrar na <span class="highlight">Física de Partículas</span> pode ser, ao mesmo tempo, fascinante e intimidante. 
+                    Existe uma quantidade enorme de conceitos, formalismos matemáticos, partículas, simetrias, 
+                    modelos e artigos científicos para conhecer. Muitas vezes, porém, a maior dificuldade não 
+                    é encontrar informação — é descobrir por onde começar.
+                </p>
 
-                Essas são algumas das perguntas que pretendo explorar aqui.
-            </p>
-            <p>
-                O ponto de partida da minha própria pesquisa são os hádrons exóticos, mas o caminho até eles 
-                passa por uma parte muito maior da Física. Por isso, este projeto começa nos fundamentos e pretende 
-                avançar gradualmente em direção à Física de Partículas, às interações fortes e, finalmente, 
-                ao estudo dos estados hadrônicos que motivam minha iniciação científica.
+                <p>
+                    Este site nasceu justamente dessa inquietação. Durante minha formação e minha iniciação científica, 
+                    percebi que compreender um tema de pesquisa exige muito mais do que simplesmente ler artigos. 
+                    Antes de chegar aos resultados mais avançados, existe todo um caminho de construção: 
+                    mecânica analítica, formulação lagrangeana, relatividade, simetrias e tensores que vão formando 
+                    a linguagem necessária para este universo.
+                </p>
 
-                Talvez, no futuro, este site se transforme em algo maior do que um simples registro pessoal. 
-                Talvez se torne um material que outro estudante possa encontrar justamente no momento em que estiver 
-                começando sua própria pesquisa e precisar de alguém que diga:
-            </p>
-            <p>
-                “Comece por aqui.”
+                <p>
+                    Um estudante que começa uma IC pode se deparar com dezenas de conceitos que ainda não conhece. 
+                    É fácil ter a sensação de estar sempre atrasado ou de que já deveria entender algo que ainda não teve a oportunidade de estudar. 
+                    <strong>Eu também estou construindo esse caminho.</strong>
+                </p>
 
-                Este é o propósito deste espaço: transformar uma trajetória individual de aprendizagem em um caminho que possa ser compartilhado.
+                <blockquote>
+                    "Não quero apenas registrar respostas. Quero registrar também o caminho até elas."
+                </blockquote>
 
-                Se você também está começando a estudar Física de Partículas, espero que encontre aqui não apenas conteúdo, mas também uma direção.
-            </p>
+                <p>
+                    Por isso, este espaço não é uma enciclopédia pronta. Ele é, principalmente, um <span class="highlight">registro do meu processo de aprendizagem</span>. 
+                    Aqui reúno os conceitos que estudo, minhas interpretações, dúvidas, dificuldades e as conexões que vou construindo.
+                </p>
 
+                <p>
+                    Meu objetivo é criar uma espécie de <strong>mapa</strong>. Quais conhecimentos são necessários antes de estudar determinado assunto? 
+                    Por que determinado conceito aparece? O que um artigo realmente está dizendo quando utiliza uma linguagem que, à primeira vista, parece inacessível?
+                </p>
+
+                <p>
+                    O ponto de partida da minha própria pesquisa são os <span class="highlight">Hádrons Exóticos</span>, mas o caminho até eles passa por uma parte muito maior da Física. 
+                    Por isso, este projeto começa nos fundamentos e pretende avançar gradualmente. Talvez, no futuro, este site se transforme num material que 
+                    outro estudante possa encontrar justamente no momento em que precisar de alguém que diga: <em>"Comece por aqui."</em>
+                </p>
+            </div>
         </section>
 
         <section id="fundamentos">
@@ -422,7 +419,7 @@
             <h2>Sobre Mim</h2>
             
             <div class="sobre-container">
-                <img src="perfil.jpeg" alt="Minha Foto" class="sobre-foto">
+                <img src="perfil.png" alt="Minha Foto" class="sobre-foto">
                 
                 <div class="sobre-texto">
                     <h3>Olá, eu sou a Carolina Copeli.</h3>
@@ -430,8 +427,8 @@
                         Sou aluna da graduação em Física, apaixonada por desvendar as regras fundamentais que regem o universo. Atualmente, dedico minha pesquisa de Iniciação Científica ao estudo teórico de Partículas, com foco em Hádrons Exóticos.
                     </p>
                     <div class="links-academicos">
-                        <a href="https://lattes.cnpq.br/1986064110068969" class="link-academico">Currículo Lattes</a>
-                        <a href="www.linkedin.com/in/carolina-copeli" class="link-academico">LinkedIn</a>
+                        <a href="https://lattes.cnpq.br/1986064110068969" class="link-academico" target="_blank">Currículo Lattes</a>
+                        <a href="https://www.linkedin.com/in/carolina-copeli" class="link-academico" target="_blank">LinkedIn</a>
                     </div>
                 </div>
             </div>
