@@ -83,6 +83,42 @@
                 </ul>
             </div>
         </section>
+
+        <!-- NOVO: Formulário de Contato -->
+        <section class="card">
+            <h2>Contato / Aulas Particulares</h2>
+            <p>Interessado em aulas particulares de Física e Matemática ou colaborações acadêmicas? Envie uma mensagem:</p>
+            
+            <!-- Substitua SEU_ID_DO_FORMSPREE pelo link gerado na sua conta gratuita do Formspree -->
+            <form action="https://formspree.io/f/SEU_ID_DO_FORMSPREE" method="POST" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                
+                <div>
+                    <label for="nome" style="display: block; margin-bottom: 5px;"><strong>Seu Nome:</strong></label>
+                    <input type="text" id="nome" name="name" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <div>
+                    <label for="email" style="display: block; margin-bottom: 5px;"><strong>Seu E-mail:</strong></label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                </div>
+
+                <div>
+                    <label for="assunto" style="display: block; margin-bottom: 5px;"><strong>Assunto:</strong></label>
+                    <select id="assunto" name="assunto" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="aulas">Aulas Particulares (Física/Matemática)</option>
+                        <option value="pesquisa">Pesquisa / Iniciação Científica</option>
+                        <option value="outro">Outros Assuntos Acadêmicos</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="mensagem" style="display: block; margin-bottom: 5px;"><strong>Mensagem:</strong></label>
+                    <textarea id="mensagem" name="message" rows="5" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                </div>
+
+                <button type="submit" class="button" style="align-self: flex-start; cursor: pointer; border: none;">Enviar Mensagem</button>
+            </form>
+        </section>
     </main>
 
     <!-- =========================
