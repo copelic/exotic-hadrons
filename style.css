@@ -5,9 +5,24 @@ html {
 body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    background: #f7f7f4;
+    background: #eae8e1; /* Um tom de fundo geral um pouco mais encorpado para preencher as laterais */
     color: #2b2b2b;
     line-height: 1.8;
+}
+
+/* =========================
+   ESTRUTURA GERAL (EFEITO DE PÁGINA)
+   ========================= */
+/* Isso faz com que todo o corpo do site pareça uma folha/documento centralizado, 
+   removendo a sensação de vazio absoluto nas laterais em monitores grandes */
+body > header, 
+body > nav, 
+body > main, 
+body > footer {
+    max-width: 1100px; /* Aumentamos a largura útil de 900px para 1100px */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05); /* Sombra elegante nas laterais */
 }
 
 /* =========================
@@ -19,7 +34,6 @@ header {
     padding: 85px 20px;
     text-align: center;
     border-bottom: 4px solid #4a705e;
-    box-shadow: inset 0 -10px 20px rgba(0,0,0,0.15);
 }
 
 header h1 {
@@ -40,7 +54,7 @@ header p {
    MENU (STICKY)
    ========================= */
 nav {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     padding: 15px;
     text-align: center;
@@ -48,7 +62,6 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
 nav a {
@@ -66,7 +79,6 @@ nav a:hover {
     transform: translateY(-1px);
 }
 
-/* Página atual */
 nav a.active {
     color: #4a705e;
     border-bottom: 2px solid #4a705e;
@@ -77,9 +89,9 @@ nav a.active {
    CONTEÚDO PRINCIPAL
    ========================= */
 main {
-    max-width: 920px;
-    margin: 60px auto;
-    padding: 0 25px;
+    background: #f7f7f4; /* Fundo interno do conteúdo ligeiramente mais claro */
+    padding: 60px 50px; /* Mais respiro nas laterais internas */
+    min-height: 600px;
 }
 
 section {
@@ -132,7 +144,7 @@ blockquote {
 }
 
 /* =========================
-   CARDS (PADRÃO REFINADO)
+   CARDS
    ========================= */
 .card {
     background: white;
@@ -339,7 +351,6 @@ footer {
     color: white;
     text-align: center;
     padding: 40px 20px;
-    margin-top: 100px;
     border-top: 4px solid #4a705e;
 }
 
@@ -494,7 +505,7 @@ footer p {
    ========================= */
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 10px;
@@ -539,6 +550,18 @@ footer p {
     }
 }
 
+@media (max-width: 1120px) {
+    /* Em telas menores que a largura do site, removemos o efeito de caixa flutuante 
+       para que ele ocupe 100% da tela confortavelmente em notebooks menores e tablets */
+    body > header, 
+    body > nav, 
+    body > main, 
+    body > footer {
+        max-width: 100%;
+        box-shadow: none;
+    }
+}
+
 @media (max-width: 600px) {
     header h1 {
         font-size: 32px;
@@ -551,7 +574,6 @@ footer p {
         margin: 6px 10px;
     }
     main {
-        padding: 0 15px;
-        margin: 30px auto;
+        padding: 30px 15px;
     }
 }
