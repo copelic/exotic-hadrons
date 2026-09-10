@@ -5,24 +5,9 @@ html {
 body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    background: #eae8e1; /* Um tom de fundo geral um pouco mais encorpado para preencher as laterais */
+    background: #f7f7f4;
     color: #2b2b2b;
     line-height: 1.8;
-}
-
-/* =========================
-   ESTRUTURA GERAL (EFEITO DE PÁGINA)
-   ========================= */
-/* Isso faz com que todo o corpo do site pareça uma folha/documento centralizado, 
-   removendo a sensação de vazio absoluto nas laterais em monitores grandes */
-body > header, 
-body > nav, 
-body > main, 
-body > footer {
-    max-width: 1100px; /* Aumentamos a largura útil de 900px para 1100px */
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.05); /* Sombra elegante nas laterais */
 }
 
 /* =========================
@@ -31,21 +16,21 @@ body > footer {
 header {
     background: linear-gradient(135deg, #18251f 0%, #24382f 100%);
     color: white;
-    padding: 85px 20px;
+    padding: 70px 20px;
     text-align: center;
     border-bottom: 4px solid #4a705e;
 }
 
 header h1 {
-    font-size: 44px;
-    margin-bottom: 12px;
+    font-size: 40px;
+    margin-bottom: 10px;
     letter-spacing: -0.5px;
 }
 
 header p {
-    font-size: 20px;
+    font-size: 18px;
     opacity: 0.9;
-    max-width: 750px;
+    max-width: 700px;
     margin: 0 auto;
     font-weight: 300;
 }
@@ -54,14 +39,15 @@ header p {
    MENU (STICKY)
    ========================= */
 nav {
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 15px;
+    padding: 14px;
     text-align: center;
     border-bottom: 1px solid #e0e0dc;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
 nav a {
@@ -70,13 +56,12 @@ nav a {
     margin: 0 14px;
     font-weight: bold;
     font-size: 15px;
-    transition: color 0.3s, transform 0.2s;
+    transition: color 0.3s;
     display: inline-block;
 }
 
 nav a:hover {
     color: #4a705e;
-    transform: translateY(-1px);
 }
 
 nav a.active {
@@ -89,37 +74,36 @@ nav a.active {
    CONTEÚDO PRINCIPAL
    ========================= */
 main {
-    background: #f7f7f4; /* Fundo interno do conteúdo ligeiramente mais claro */
-    padding: 60px 50px; /* Mais respiro nas laterais internas */
-    min-height: 600px;
+    max-width: 1000px; /* Largura equilibrada, sem sobrar espaço exagerado nas laterais */
+    margin: 50px auto;
+    padding: 0 20px;
 }
 
 section {
-    margin-bottom: 75px;
+    margin-bottom: 60px;
     scroll-margin-top: 90px;
 }
 
 h2 {
     color: #18251f;
-    font-size: 32px;
+    font-size: 30px;
     border-bottom: 2px solid #18251f;
-    padding-bottom: 10px;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    letter-spacing: -0.3px;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 h3 {
     color: #18251f;
-    font-size: 22px;
+    font-size: 21px;
 }
 
 /* =========================
-   TEXTO INICIAL & DESTAQUES
+   TEXTOS E DESTAQUES
    ========================= */
 .intro-texto {
-    font-size: 19px;
-    line-height: 1.85;
+    font-size: 18px;
+    line-height: 1.8;
     color: #333;
 }
 
@@ -133,39 +117,37 @@ h3 {
 
 blockquote {
     font-style: italic;
-    border-left: 5px solid #4a705e;
-    margin: 40px 0;
-    padding: 25px 30px;
+    border-left: 4px solid #4a705e;
+    margin: 30px 0;
+    padding: 20px 25px;
     background: #eef2f0;
     color: #18251f;
-    font-size: 21px;
-    border-radius: 0 8px 8px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    font-size: 20px;
+    border-radius: 0 6px 6px 0;
 }
 
 /* =========================
-   CARDS
+   CARDS DE CONTEÚDO
    ========================= */
 .card {
     background: white;
-    padding: 30px;
-    margin: 25px 0;
-    border-radius: 10px;
+    padding: 28px;
+    margin: 22px 0;
+    border-radius: 8px;
     border: 1px solid #e2e2dc;
-    border-top: 4px solid #18251f;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-top: 3px solid #18251f;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(24, 37, 31, 0.08);
-    border-color: #d0d0c8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
 }
 
 .card h3 {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .date-badge {
@@ -173,26 +155,15 @@ blockquote {
     color: #666;
     font-style: italic;
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* =========================
-   CARDS CLICÁVEIS
-   ========================= */
 .card-link {
     text-decoration: none;
     color: inherit;
     display: block;
-}
-
-.card-link .card {
-    cursor: pointer;
-}
-
-.card-link .card:hover {
-    border-top-color: #4a705e;
 }
 
 /* =========================
@@ -200,22 +171,18 @@ blockquote {
    ========================= */
 .button {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 10px 20px;
     background: #18251f;
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 5px;
     font-weight: bold;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(24, 37, 31, 0.2);
+    font-size: 14px;
+    transition: background 0.3s;
 }
 
 .button:hover {
     background: #4a705e;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(74, 112, 94, 0.3);
-    opacity: 1;
 }
 
 /* =========================
@@ -224,21 +191,20 @@ blockquote {
 .sobre-container {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     background: white;
-    padding: 45px;
-    border-radius: 12px;
+    padding: 35px;
+    border-radius: 8px;
     border: 1px solid #e2e2dc;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
 .sobre-foto {
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid #18251f;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 4px solid #18251f;
     flex-shrink: 0;
 }
 
@@ -247,68 +213,58 @@ blockquote {
 }
 
 .sobre-texto h3 {
-    font-size: 28px;
+    font-size: 26px;
     margin-top: 0;
 }
 
 .links-academicos {
-    margin-top: 25px;
+    margin-top: 20px;
     display: flex;
-    gap: 15px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
 .link-academico {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 16px;
     background: #18251f;
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 5px;
     font-weight: bold;
-    transition: all 0.3s;
+    font-size: 14px;
+    transition: background 0.3s;
 }
 
 .link-academico:hover {
     background: #4a705e;
-    opacity: 1;
 }
 
 /* =========================
    LINHA DO TEMPO
    ========================= */
 .timeline {
-    margin-top: 40px;
-    border-left: 3px solid #4a705e;
-    padding-left: 35px;
+    margin-top: 30px;
+    border-left: 2px solid #4a705e;
+    padding-left: 25px;
     margin-left: 10px;
 }
 
 .timeline-item {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     position: relative;
 }
 
 .timeline-item::before {
     content: "";
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     background: #18251f;
-    border: 3px solid #f7f7f4;
+    border: 2px solid #f7f7f4;
     border-radius: 50%;
     position: absolute;
-    left: -44px;
-    top: 6px;
-    box-shadow: 0 0 0 2px #4a705e;
-}
-
-.timeline-item h3 {
-    margin-bottom: 6px;
-}
-
-.timeline-item p {
-    margin-top: 0;
-    color: #444;
+    left: -32px;
+    top: 5px;
 }
 
 /* =========================
@@ -316,31 +272,27 @@ blockquote {
    ========================= */
 .status {
     display: inline-block;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .status-concluido {
     background: #dfeee6;
     color: #28553e;
-    border: 1px solid #c2e2d0;
 }
 
 .status-andamento {
     background: #fbf5db;
     color: #665521;
-    border: 1px solid #f0e2b0;
 }
 
 .status-futuro {
     background: #ecece8;
     color: #555;
-    border: 1px solid #d8d8d2;
 }
 
 /* =========================
@@ -350,169 +302,99 @@ footer {
     background: #18251f;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 20px;
+    margin-top: 80px;
     border-top: 4px solid #4a705e;
 }
 
 footer p {
-    margin: 6px 0;
+    margin: 5px 0;
     opacity: 0.85;
 }
 
 /* =========================
-   PÁGINA DE ARTIGOS
+   PÁGINAS INTERNAS DE ARTIGOS
    ========================= */
 .article-meta {
     font-size: 14px;
     color: #444;
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 25px;
+    padding: 18px;
+    border-radius: 6px;
+    margin-bottom: 20px;
     border: 1px solid #e2e2dc;
     border-left: 4px solid #4a705e;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
 .article-meta p {
-    margin: 6px 0;
-}
-
-.article-meta a {
-    color: #4a705e;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.article-meta a:hover {
-    text-decoration: underline;
+    margin: 4px 0;
 }
 
 .article-notes {
     background: white;
-    padding: 25px;
-    border-radius: 8px;
-    margin-bottom: 25px;
+    padding: 22px;
+    border-radius: 6px;
+    margin-bottom: 20px;
     border: 1px solid #e2e2dc;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
 
 .article-notes h4 {
     margin-top: 0;
     color: #18251f;
-    font-size: 19px;
+    font-size: 18px;
     border-bottom: 1px solid #e0e0dc;
-    padding-bottom: 12px;
+    padding-bottom: 10px;
 }
 
-.article-actions {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 25px;
-    flex-wrap: wrap;
-}
-
-.button-outline {
-    background: transparent;
-    color: #18251f;
-    border: 2px solid #18251f;
-    box-shadow: none;
-}
-
-.button-outline:hover {
-    background: #18251f;
-    color: white;
-    opacity: 1;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(24, 37, 31, 0.2);
-}
-
-/* Container interativo do PDF */
 .pdf-viewer-container {
     background: white;
     border: 1px solid #e2e2dc;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    border-radius: 8px;
+    padding: 12px;
 }
 
 .pdf-viewer-container summary {
     font-weight: bold;
     cursor: pointer;
     color: #4a705e;
-    list-style: none;
-    display: block;
     text-align: center;
-    padding: 12px;
-    border-radius: 6px;
+    padding: 10px;
     background: #f7f7f4;
-    transition: all 0.3s;
+    border-radius: 5px;
     border: 1px solid #e0e0dc;
 }
 
-.pdf-viewer-container summary:hover {
-    background: #eef2f0;
-    color: #18251f;
-}
-
 .pdf-viewer-container iframe {
-    border-radius: 6px;
-    margin-top: 15px;
-    background: #eaeaea;
-    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 12px;
+    width: 100%;
 }
 
-/* =========================
-   LISTA DE REPOSITÓRIOS / EXERCÍCIOS
-   ========================= */
 .repo-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 25px;
+    gap: 12px;
+    margin-top: 20px;
 }
 
 .repo-item {
     background: white;
-    padding: 18px 22px;
-    border-radius: 8px;
+    padding: 16px 20px;
+    border-radius: 6px;
     border: 1px solid #e2e2dc;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
 }
 
-.repo-item:hover {
-    border-color: #4a705e;
-    transform: translateX(3px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.04);
-}
-
-.repo-item a {
-    color: #4a705e;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.repo-item a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   VÍDEOS (AULAS)
-   ========================= */
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 8px;
     background: #000;
-    margin: 20px 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    border: 1px solid #ddd;
+    margin: 15px 0;
 }
 
 .video-wrapper iframe {
@@ -525,55 +407,18 @@ footer p {
 }
 
 /* =========================
-   RESPONSIVIDADE (CELULARES)
+   RESPONSIVIDADE
    ========================= */
 @media (max-width: 700px) {
     .sobre-container {
         flex-direction: column;
         text-align: center;
-        padding: 30px 20px;
     }
     .sobre-foto {
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
     }
     .links-academicos {
         justify-content: center;
-    }
-    .timeline {
-        text-align: left;
-        margin-left: 5px;
-        padding-left: 25px;
-    }
-    .timeline-item::before {
-        left: -33px;
-    }
-}
-
-@media (max-width: 1120px) {
-    /* Em telas menores que a largura do site, removemos o efeito de caixa flutuante 
-       para que ele ocupe 100% da tela confortavelmente em notebooks menores e tablets */
-    body > header, 
-    body > nav, 
-    body > main, 
-    body > footer {
-        max-width: 100%;
-        box-shadow: none;
-    }
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 32px;
-    }
-    header {
-        padding: 60px 15px;
-    }
-    nav a {
-        display: inline-block;
-        margin: 6px 10px;
-    }
-    main {
-        padding: 30px 15px;
     }
 }
