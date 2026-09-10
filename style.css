@@ -5,7 +5,8 @@ html {
 body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
-    background: #f7f7f4;
+    background: url('fundo.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #2b2b2b;
     line-height: 1.8;
 }
@@ -74,9 +75,12 @@ nav a.active {
    CONTEÚDO PRINCIPAL
    ========================= */
 main {
-    max-width: 1000px; /* Largura equilibrada, sem sobrar espaço exagerado nas laterais */
+    max-width: 1000px;
     margin: 50px auto;
-    padding: 0 20px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 section {
